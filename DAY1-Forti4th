@@ -169,10 +169,10 @@ config t
 ip routing
 ip dhcp pool CAMERA6
 host 10.11.50.6 255.255.255.0
-client-identifier 001a.070a.c334
+client-identifier 001a.0711.5620
 ip dhcp pool CAMERA8
 host 10.11.50.8 255.255.255.0
-client-identifier 001a.0708.6f17
+client-identifier 001a.0709.c17a
 end
 show ip dhcp binding
 
@@ -262,7 +262,7 @@ voice register dn 10
  allow watch
 !
 voice register pool 1
- id mac 00bc.60bf.47c6
+ id mac dcf7.19d8.9568
  number 1 dn 1
  number 2 dn 2
  number 3 dn 3
@@ -274,7 +274,7 @@ voice register pool 1
  type 8851
 !
 voice register pool 2
- id mac dcf7.19d9.b574
+ id mac c4c6.03f1.e628
  number 1 dn 6
  number 2 dn 8
  number 3 dn 9
@@ -305,13 +305,13 @@ conf t
 
 !Dial-Peer Don't Touch yourself ( Line 307-380 Paste on CME )
 conf t
- dial-peer voice 11 Voip
-  destination-pattern 11..
-  session target ipv4:10.11.100.8
-  codec g711ULAW
- dial-peer voice 11 Voip
-  destination-pattern 11..
-  session target ipv4:10.11.100.8
+ !dial-peer voice 11 Voip
+  !destination-pattern 11..
+  !session target ipv4:10.11.100.8
+  !codec g711ULAW
+ dial-peer voice 12 Voip
+  destination-pattern 12..
+  session target ipv4:10.12.100.8
   codec g711ULAW
  dial-peer voice 21 Voip
   destination-pattern 21..
